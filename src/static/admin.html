@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mergington High School Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Admin Dashboard</h1>
+      <p>Overview of activities, participation, and capacity across the system.</p>
+      <nav>
+        <a href="index.html">&larr; Back to student activities</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="dashboard-summary" id="dashboard-summary">
+        <div class="summary-card">
+          <h4>Total Activities</h4>
+          <p id="total-activities">0</p>
+        </div>
+        <div class="summary-card">
+          <h4>Total Participants</h4>
+          <p id="total-participants">0</p>
+        </div>
+        <div class="summary-card">
+          <h4>Open Spots</h4>
+          <p id="total-open-spots">0</p>
+        </div>
+      </section>
+
+      <section id="activity-dashboard">
+        <h3>Activity Oversight</h3>
+        <div id="activity-list">Loading activity data...</div>
+      </section>
+
+      <section id="admin-actions">
+        <h3>Admin Participant Management</h3>
+        <form id="admin-signup-form">
+          <div class="form-group">
+            <label for="admin-email">Student Email:</label>
+            <input type="email" id="admin-email" required placeholder="student@mergington.edu" />
+          </div>
+          <div class="form-group">
+            <label for="admin-activity">Select Activity:</label>
+            <select id="admin-activity" required>
+              <option value="">-- Select an activity --</option>
+            </select>
+          </div>
+          <button type="submit">Add Participant</button>
+        </form>
+        <div id="admin-message" class="hidden"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Mergington High School</p>
+    </footer>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
